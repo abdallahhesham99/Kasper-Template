@@ -1,3 +1,8 @@
+/* Start Variables  */
+:root {
+  --main-color: #00c7fc;
+}
+/* End Variables  */
 /*Start Global Rules*/
 * {
   margin: 0;
@@ -45,3 +50,90 @@ a {
   }
 }
 /* End Layout  */
+/* ========================================================================== */
+/* start header  */
+.header {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header__content {
+  border-bottom: 1px solid #636364;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__menu {
+  display: flex;
+  align-items: center;
+}
+.nav__links {
+  display: flex;
+}
+.nav__link a {
+  display: inline-block;
+  padding: 38px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 300ms;
+}
+.nav__link:last-of-type a {
+  padding-right: 0;
+}
+.nav__link a:hover {
+  color: var(--main-color);
+}
+.nav__link a.active {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+.header .form {
+  position: relative;
+  width: 50px;
+  height: 20px;
+  margin-left: 30px;
+  border-left: 1px solid #fff;
+  cursor: pointer;
+}
+.header .form i {
+  padding-left: 20px;
+  font-size: 18px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+/* end header  */
+/* ========================================================================== */
+/* start home */
+.home {
+  background-image: url(../images/landing.jpg);
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  height: 100vh;
+}
+/* end home */
+/* ========================================================================== */
+/* start service */
+/* end service */
+/* ========================================================================== */
+/* start portfolio */
+/* end portfolio */
+/* ========================================================================== */
+/* start about */
+/* end about */
+/* ========================================================================== */
+/* start pricing */
+/* end pricing */
+/* ========================================================================== */
+/* start contact */
+/* end contact */
