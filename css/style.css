@@ -21,6 +21,14 @@ ul {
 a {
   text-decoration: none;
 }
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
 /*End Global Rules*/
 
 /* Start Layout  */
@@ -174,11 +182,82 @@ a {
 /* ========================================================================== */
 /* start home */
 .home {
-  background-image: url(../images/landing.jpg);
-  background-blend-mode: darken;
-  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.home .swiper-slide {
   background-size: cover;
   height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.home .swiper-slide:first-of-type {
+  background-image: url(../images/bg1.jpg);
+}
+.home .swiper-slide:nth-last-of-type(2) {
+  background-image: url(../images/bg2.jpg);
+}
+.home .swiper-slide:last-of-type {
+  background-image: url(../images/bg3.jpg);
+}
+.home .swiper-slide .slide__description {
+  position: absolute;
+  top: 50%;
+  width: 70%;
+  transform: translateY(-50%);
+  background-color: rgba(15, 116, 143, 0.8);
+  color: #fff;
+  padding: 60px 50px 80px 20%;
+}
+.home .slide__description-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+  line-height: 50px;
+  font-weight: 500;
+}
+.slide__description-p {
+  font-size: 13px;
+  line-height: 28px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 14px;
+}
+
+.swiper-button-prev {
+  left: 50px;
+}
+.swiper-button-next {
+  right: 50px;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.swiper-pagination-bullet {
+  background-color: transparent;
+  border: 1px solid #fff;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--main-color);
+}
+
+/* ================== */
+@media screen and (max-width: 991px) {
+  .home .swiper-slide .slide__description {
+    top: 100%;
+    transform: translateY(-100%);
+  }
 }
 /* end home */
 /* ========================================================================== */
