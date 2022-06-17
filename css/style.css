@@ -255,10 +255,24 @@ a {
 /* ================== */
 @media screen and (max-width: 991px) {
   .home .swiper-slide .slide__description {
-    top: 100%;
-    transform: translateY(-100%);
+    padding: 20px 50px 60px 20%;
   }
 }
+@media screen and (max-width: 767px) {
+  .home .swiper-slide .slide__description {
+    top: 100%;
+    transform: translateY(-100%);
+    padding: 20px 30px 40px 10%;
+  }
+  .home .swiper-slide .slide__description-title {
+    font-size: 20px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
+
 /* end home */
 /* ========================================================================== */
 /* start service */
