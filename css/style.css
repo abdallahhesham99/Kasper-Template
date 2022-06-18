@@ -1,6 +1,7 @@
 /* Start Variables  */
 :root {
   --main-color: #00c7fc;
+  --overlay--color: rgba(15, 116, 143, 0.8);
 }
 /* End Variables  */
 /*Start Global Rules*/
@@ -15,19 +16,84 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
 ul {
   list-style: none;
 }
 a {
   text-decoration: none;
 }
-
+p {
+  color: #a8a8a8;
+}
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 2;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.section__header .section__title h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding-bottom: 28px;
+  margin-bottom: 25px;
+  display: inline-block;
+}
+.section__header .section__title h2:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 70%;
+  height: 1px;
+  transform: translateX(-50%);
+  background-color: #000;
+}
+.section__header .section__title h2:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+.section__header .section__description {
+  width: 35%;
+  text-align: center;
+  display: inline-block;
+}
+.section__header .section__description p {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 991px) {
+  .section__header .section__description {
+    width: 70%;
+  }
 }
 /*End Global Rules*/
 
@@ -128,7 +194,7 @@ a {
   right: 0;
   transform: translateY(-50%);
 }
-/* =============================== Header Responsive ============================================ */
+/* ============= Header Responsive =================== */
 @media screen and (max-width: 991px) {
   .nav__link a {
     padding: 38px 10px;
@@ -179,7 +245,7 @@ a {
   }
 }
 /* end header  */
-/* ========================================================================== */
+/* ========================================================================================= */
 /* start home */
 .home {
   position: relative;
@@ -205,7 +271,7 @@ a {
   top: 50%;
   width: 70%;
   transform: translateY(-50%);
-  background-color: rgba(15, 116, 143, 0.8);
+  background-color: var(--overlay--color);
   color: #fff;
   padding: 60px 50px 80px 20%;
 }
@@ -218,6 +284,7 @@ a {
 .slide__description-p {
   font-size: 13px;
   line-height: 28px;
+  color: #fff;
 }
 
 .swiper-button-prev,
@@ -251,8 +318,7 @@ a {
 .swiper-pagination-bullet-active {
   background-color: var(--main-color);
 }
-
-/* ================== */
+/* =============== Home Responsive ===================== */
 @media screen and (max-width: 991px) {
   .home .swiper-slide .slide__description {
     padding: 20px 50px 60px 20%;
@@ -260,27 +326,64 @@ a {
 }
 @media screen and (max-width: 767px) {
   .home .swiper-slide .slide__description {
-    top: 100%;
-    transform: translateY(-100%);
+    width: 100%;
     padding: 20px 30px 40px 10%;
   }
-  .home .swiper-slide .slide__description-title {
-    font-size: 20px;
-  }
+
   .swiper-button-prev,
   .swiper-button-next {
     display: none;
   }
 }
-
 /* end home */
-/* ========================================================================== */
+/* ========================================================================================= */
 /* start service */
+.services__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+.services__item {
+  display: flex;
+  padding-right: 25px;
+}
+.services__icon {
+  margin-right: 50px;
+  font-size: 2.5rem;
+}
+
+.services__item-title {
+  color: var(--main-color);
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.services__item-desc {
+  font-size: 13px;
+  line-height: 1.8;
+}
+/* =============== Services Responsive ===================== */
+
+@media screen and (max-width: 767px) {
+  .services__content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .services__item {
+    padding-right: 0;
+  }
+  .services__icon {
+    margin-right: 30px;
+  }
+  .services__item-desc {
+    padding-top: 20px;
+  }
+}
 /* end service */
-/* ========================================================================== */
+/* ========================================================================================= */
 /* start portfolio */
 /* end portfolio */
-/* ========================================================================== */
+/* ========================================================================================= */
+
 /* start about */
 /* end about */
 /* ========================================================================== */
