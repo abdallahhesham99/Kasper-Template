@@ -441,6 +441,7 @@ p {
 .portfolio .tabs__buttons .tabs {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 30px;
 }
 .portfolio .tabs__buttons .tabs li {
