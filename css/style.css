@@ -467,7 +467,7 @@ p {
 .portfilio__item {
   position: relative;
   overflow: hidden;
-  animation: fade 1s ease;
+  animation: fade 1s ease-in-out;
 }
 .portfilio__item img {
   width: 100%;
@@ -516,6 +516,49 @@ p {
   }
 }
 /* end portfolio */
+/* ========================================================================================= */
+/* start video */
+section.video {
+  position: relative;
+}
+section.video::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+}
+section.video video {
+  width: 100%;
+}
+.video__content {
+  background-color: var(--overlay--color);
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+  padding: 50px 0;
+}
+.video__content h2 {
+  text-transform: uppercase;
+}
+.video__content h2,
+.video__content p {
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.video__content button {
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 8px;
+  cursor: pointer;
+  border: none;
+}
+/* end video */
 /* ========================================================================================= */
 /* start about */
 /* end about */
