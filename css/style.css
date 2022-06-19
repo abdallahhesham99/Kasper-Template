@@ -1,6 +1,7 @@
 /* Start Variables  */
 :root {
   --main-color: #00c7fc;
+  --darken-color: #1f2021;
   --overlay--color: rgba(15, 116, 143, 0.8);
 }
 /* End Variables  */
@@ -65,7 +66,7 @@ p {
   width: 70%;
   height: 1px;
   transform: translateX(-50%);
-  background-color: #000;
+  background-color: var(--darken-color);
 }
 .section__header .section__title h2:after {
   content: "";
@@ -76,7 +77,7 @@ p {
   height: 10px;
   transform: translateX(-50%);
   background-color: #fff;
-  border: 1px solid #000;
+  border: 1px solid var(--darken-color);
   border-radius: 50%;
 }
 .section__header .section__description {
@@ -552,7 +553,7 @@ section.video video {
 }
 
 .video__content button {
-  background-color: #000;
+  background-color: var(--darken-color);
   color: #fff;
   text-transform: uppercase;
   padding: 8px;
@@ -569,7 +570,7 @@ section.video video {
   margin-bottom: 50px;
 }
 .about__content {
- text-align: center;
+  text-align: center;
 }
 .about__img {
   position: relative;
@@ -584,7 +585,74 @@ section.video video {
 /* end about */
 /* ========================================================================== */
 /* start count */
+.count {
+  background-image: url(../images/stats.png);
+  background-size: cover;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.count__content {
+  background-color: var(--overlay--color);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
 
+.count__item {
+  color: #fff;
+  text-align: center;
+}
+.count__icon {
+  background-color: var(--darken-color);
+  width: 50px;
+  position: relative;
+  margin: 15px auto;
+}
+
+.count__icon::before,
+.count__icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-right: 25px solid transparent;
+  border-left: 25px solid transparent;
+}
+
+.count__icon::before {
+  bottom: 100%;
+  border-bottom: 14px solid var(--darken-color);
+}
+
+.count__icon::after {
+  border-top: 14px solid var(--darken-color);
+
+  top: 100%;
+}
+.count__number {
+  margin: 20px 0;
+  font-size: 3rem;
+  font-weight: 900;
+}
+.count__p {
+  color: #fff;
+}
+
+/* ============== Count Responsive ========================== */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .count__content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .count__content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+}
 /* end count */
 /* ========================================================================== */
 /* start pricing */
