@@ -434,10 +434,87 @@ p {
     padding: 20px;
   }
 }
-
 /* end Design */
 /* ========================================================================================= */
 /* start portfolio */
+
+.portfolio .tabs__buttons .tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.portfolio .tabs__buttons .tabs li {
+  text-transform: uppercase;
+  margin-right: 5px;
+  transition: 300ms;
+  padding: 10px 20px;
+  font-size: 13px;
+}
+.portfolio .tabs__buttons .tabs li.active,
+.portfolio .tabs__buttons .tabs li:hover {
+  background-color: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+}
+
+.portfolio__content > div:not(:first-child) {
+  display: none;
+}
+.portfolio__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.portfilio__item {
+  position: relative;
+  overflow: hidden;
+  animation: fade 1s ease;
+}
+.portfilio__item img {
+  width: 100%;
+  transition: 300ms;
+}
+.portfilio__item:hover img {
+  transform: rotate(3deg) scale(1.1);
+}
+.portfolio__image-content {
+  padding: 20px;
+  position: absolute;
+  background-color: #fff;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  transition: 300ms;
+}
+
+.portfilio__item:hover .portfolio__image-content {
+  bottom: 0;
+}
+
+.portfolio__image-content p {
+  color: var(--main-color);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* =============== Portfolio section Responsive ===================== */
+@media screen and (max-width: 991px) {
+  .portfolio__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 767px) {
+  .portfolio__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 /* end portfolio */
 /* ========================================================================================= */
 /* start about */
