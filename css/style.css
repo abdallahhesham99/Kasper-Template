@@ -568,13 +568,19 @@ section.video video {
 .about .section__header {
   margin-bottom: 50px;
 }
-
+.about__content {
+ text-align: center;
+}
 .about__img {
   position: relative;
-  width: 100%;
+
   bottom: -4px;
 }
-
+@media screen and (max-width: 767px) {
+  .about__img {
+    width: 100%;
+  }
+}
 /* end about */
 /* ========================================================================== */
 /* start count */
