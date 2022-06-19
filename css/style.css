@@ -561,7 +561,24 @@ section.video video {
 /* end video */
 /* ========================================================================================= */
 /* start about */
+.about.section {
+  padding-bottom: 0;
+}
+.about .section__header {
+  margin-bottom: 50px;
+}
+
+.about__img {
+  position: relative;
+  width: 100%;
+  bottom: -4px;
+}
+
 /* end about */
+/* ========================================================================== */
+/* start count */
+
+/* end count */
 /* ========================================================================== */
 /* start pricing */
 /* end pricing */
