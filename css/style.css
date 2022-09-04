@@ -591,6 +591,9 @@ section.video video {
   background-blend-mode: darken;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.count.section {
+  padding: 50px 0;
+}
 .count__content {
   background-color: var(--overlay--color);
   padding: 40px;
