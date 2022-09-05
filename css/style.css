@@ -658,6 +658,103 @@ section.video video {
 }
 /* end count */
 /* ========================================================================== */
+/* start skills */
+.skills .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.skills .container > div > h3 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.skills .container > div > p {
+  text-align: center;
+}
+.testimonials__content,
+.our__skills-content {
+  margin-top: 50px;
+}
+.testimonials__item {
+  display: flex;
+  margin-bottom: 60px;
+}
+.testimonials__item .testimonial__img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.testimonials__desc {
+  margin-left: 2rem;
+  border-bottom: 1px solid #ccc;
+  line-height: 2;
+}
+.testimonials__desc p {
+  color: var(--darken-color);
+}
+.testimonials__desc span {
+  display: block;
+  text-align: right;
+  color: #a8a8a8;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.our__skills-content .prog_holder {
+  margin-bottom: 30px;
+}
+.our__skills-content .prog_holder h4 {
+  margin-bottom: 8px;
+}
+.our__skills-content .prog_holder .prog {
+  background-color: #dedede;
+  height: 30px;
+}
+.our__skills-content .prog_holder .prog span {
+  display: block;
+  position: relative;
+  background-color: var(--main-color);
+  height: 100%;
+}
+.our__skills-content .prog_holder .prog span::before {
+  content: attr(data-progress);
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  padding: 4px;
+  font-size: 14px;
+  right: -16px;
+  top: -33px;
+}
+.our__skills-content .prog_holder .prog span::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -6px;
+  border-style: solid;
+  border-width: 8px;
+  border-color: #000 transparent transparent;
+}
+
+@media screen and (min-width: 992px) {
+  .skills .container > div {
+    flex-basis: 45%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .testimonials__item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .testimonial__img {
+    margin: 0 auto;
+  }
+  .testimonials__desc span {
+    text-align: center;
+  }
+}
+/* end skills */
+/* ========================================================================== */
 /* start pricing */
 /* end pricing */
 /* ========================================================================== */
