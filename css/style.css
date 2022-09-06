@@ -844,6 +844,19 @@ section.video video {
   padding: 10px 18px;
   color: var(--darken-color);
 }
+.pricing__contact-div {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.pricing__contact-div a {
+  font-size: 18px;
+  margin-top: 20px;
+  display: inline-block;
+  color: #fff;
+  background-color: var(--main-color);
+  padding: 10px 18px;
+}
 /* end pricing */
 /* ========================================================================== */
 /* start contact */
