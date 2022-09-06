@@ -755,6 +755,28 @@ section.video video {
 }
 /* end skills */
 /* ========================================================================== */
+/* start qoute */
+.qoute {
+  background-image: url(../images/quote.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  text-align: center;
+  color: #fff;
+}
+.qoute h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  .qoute h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+/* end qoute */
+/* ========================================================================== */
 /* start pricing */
 /* end pricing */
 /* ========================================================================== */
