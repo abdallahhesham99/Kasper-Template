@@ -997,3 +997,45 @@ section.video video {
   }
 }
 /* end contact */
+/* ==================================================================================== */
+/* Start Footer  */
+.footer {
+  background-image: url(../images/subscribe.jpg);
+  background-size: cover;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  color: #fff;
+}
+.footer__img {
+  margin-bottom: 60px;
+}
+.footer__desc {
+  margin-bottom: 60px;
+  font-size: 18px;
+}
+.footer__desc p {
+  font-size: 25px;
+  margin: 20px auto;
+  padding: 20px;
+  border-bottom: 1px solid #fff;
+  width: fit-content;
+  color: #fff;
+}
+
+.footer__icons i {
+  font-size: 18px;
+  padding: 10px;
+}
+.footer__icons i:not(:last-of-type) {
+  margin-right: 14px;
+}
+
+.copyrights p {
+  color: #fff;
+}
+.copyrights p span {
+  color: var(--main-color);
+  font-weight: bold;
+}
+/* End Footer  */
