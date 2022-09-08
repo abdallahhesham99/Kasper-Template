@@ -963,7 +963,8 @@ section.video video {
 .contact__details {
   flex-basis: 30%;
 }
-.contact__details h4 {
+
+.contact__details div h4 {
   margin-bottom: 20px;
   font-size: 18px;
 }
@@ -972,18 +973,27 @@ section.video video {
   margin-bottom: 10px;
   color: #a8a8a8;
 }
-.contact__details h4:nth-of-type(2) {
+.contact__details div:nth-of-type(2) h4 {
   margin-top: 80px;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
   .contact__content {
     flex-direction: column;
   }
-  .contact__content form {
-    margin-bottom: 30px;
-  }
+
   .contact__content form input[type="submit"] {
     margin: 0 auto;
+  }
+  .contact__details {
+    order: -1;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+
+  .contact__details div:nth-of-type(2) h4 {
+    margin-top: 0;
   }
 }
 /* end contact */
