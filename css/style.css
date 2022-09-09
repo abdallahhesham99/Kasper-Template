@@ -136,7 +136,10 @@ p {
   right: 0;
   z-index: 1000;
 }
-
+.header.bg-colo__onscroll {
+  background-color: var(--main-color);
+  transition: 500ms;
+}
 .header__content {
   border-bottom: 1px solid #636364;
   position: relative;
@@ -144,7 +147,9 @@ p {
   justify-content: space-between;
   align-items: center;
 }
-
+.header.bg-colo__onscroll .header__content {
+  border: none;
+}
 .nav__menu {
   display: flex;
   align-items: center;
@@ -169,15 +174,22 @@ p {
   text-transform: uppercase;
   transition: 300ms;
 }
+
+.header.bg-colo__onscroll .nav__link a {
+  padding: 28px 16px;
+}
+
 .nav__link:last-of-type a {
   padding-right: 0;
 }
-.nav__link a:hover {
-  color: var(--main-color);
-}
+
 .nav__link a.active {
   color: var(--main-color);
   border-bottom: 1px solid var(--main-color);
+}
+.header.bg-colo__onscroll .nav__link a.active {
+  color: #fff;
+  border-bottom: 1px solid #fff;
 }
 .header .form {
   position: relative;
@@ -199,7 +211,7 @@ p {
 /* ============= Header Responsive =================== */
 @media screen and (max-width: 991px) {
   .nav__link a {
-    padding: 38px 10px;
+    padding: 20px 10px;
   }
 }
 
@@ -218,7 +230,7 @@ p {
   }
 
   .nav__links {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--main-color);
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -256,7 +268,7 @@ p {
 .home .swiper-slide {
   background-size: cover;
   height: 100vh;
-
+background-blend-mode: darken;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .home .swiper-slide:first-of-type {
@@ -924,8 +936,6 @@ section.video video {
 /* end subscribe */
 /* ========================================================================== */
 /* start contact */
-.contact {
-}
 .contact__content {
   display: flex;
   justify-content: space-between;
